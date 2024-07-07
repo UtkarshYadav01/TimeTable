@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Schedule and Goal Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .goal {
+            background-color: #d3d3d3;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .tracker {
+            margin-bottom: 20px;
+        }
+        .tracker h3 {
+            margin-bottom: 10px;
+        }
+        .tracker table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .tracker th, .tracker td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .tracker th {
+            background-color: #f2f2f2;
+        }
+        .checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        .checked {
+            background-color: #66bb6a; /* Green */
+        }
+    </style>
+    <script>
+        function toggleCheckbox(checkbox) {
+            checkbox.classList.toggle('checked');
+        }
+    </script>
+</head>
+<body>
+
+<div class="goal">
+    <h2>Goal: Complete Course Efficiently</h2>
+    <p>You have started a course with 82 hours, 46 minutes, and 32 seconds of content. Your goal is to complete it as quickly as possible while balancing your full-time job and other commitments.</p>
+</div>
+
+<h2>Daily Schedule</h2>
+
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Completed</th>
+    </tr>
+    <tr>
+        <td>9:00 AM</td>
+        <td>Wake Up</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>Morning Routine and Breakfast</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>10:00 AM - 10:45 AM</td>
+        <td>Study Session 1</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>10:45 AM - 11:00 AM</td>
+        <td>Daily Meeting</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>11:00 AM - 12:00 PM</td>
+        <td>Mid-day Break and Lunch</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>12:00 PM - 1:30 PM</td>
+        <td>Prep Time for Work</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>1:30 PM - 11:00 PM</td>
+        <td>Work Hours</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>7:00 PM - 8:00 PM</td>
+        <td>Dinner Break</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>9:00 PM - 9:30 PM (Wednesday)</td>
+        <td>Client Call</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>11:00 PM - 12:00 AM</td>
+        <td>Post-Work Study Session</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+    <tr>
+        <td>12:00 AM</td>
+        <td>Bedtime</td>
+        <td><div class="checkbox" onclick="toggleCheckbox(this)"></div></td>
+    </tr>
+</table>
+
+<div class="tracker">
+    <h3>Day-wise Tracker</h3>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Study Time</th>
+            <th>Accumulated Study Time</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>2 hours</td>
+            <td>2 hours</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>2 hours</td>
+            <td>4 hours</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>2 hours</td>
+            <td>6 hours</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>2 hours</td>
+            <td>8 hours</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>2 hours</td>
+            <td>10 hours</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>4 hours</td>
+            <td>14 hours</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>4 hours</td>
+            <td>18 hours</td>
+        </tr>
+    </table>
+</div>
+
+<div class="goal">
+    <h2>Course Details</h2>
+    <p><strong>Start Date:</strong> July 8, 2024</p>
+    <p><strong>Estimated End Date:</strong> July 29, 2024 (based on current study plan)</p>
+</div>
+
+</body>
+</html>

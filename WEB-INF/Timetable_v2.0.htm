@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .goal {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffeb3b;
+            border-radius: 5px;
+            color: #f57f17;
+            font-weight: bold;
+            text-align: center;
+        }
+        .day {
+            margin-bottom: 20px;
+        }
+        .day h2 {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            color: #00796b;
+        }
+        .day ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .day ul li {
+            background-color: #e0f2f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .day ul li:nth-child(even) {
+            background-color: #b2dfdb;
+        }
+        .day ul li.completed {
+            text-decoration: line-through;
+            color: #757575;
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Weekly Schedule</h1>
+            <p>July 8 - July 14, 2024</p>
+        </div>
+        <div class="content">
+            <div class="goal">
+                <p>Goal: Complete the course with 82h 46m 32s of content by July 21, 2024</p>
+            </div>
+            <div class="day">
+                <h2>Weekdays (Monday - Friday)</h2>
+                <ul>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:00 AM - 7:30 AM: Morning Routine</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:30 AM - 8:00 AM: Breakfast</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:00 AM - 10:40 AM: Study Session 1</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 10:40 AM - 11:00 AM: Stand-up Call</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 11:00 AM - 12:30 PM: Study Session 2</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:30 PM - 1:00 PM: Lunch</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 1:00 PM - 1:30 PM: Relaxation/Preparation for Work</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 1:30 PM - 11:00 PM: Work</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 3:30 PM - 3:45 PM: Short Break</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 6:00 PM - 6:30 PM: Dinner Break</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:30 PM - 8:45 PM: Short Break</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 11:00 PM - 12:00 AM: Relaxation/Personal Time</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:00 AM - 7:00 AM: Sleep</li>
+                </ul>
+            </div>
+            <div class="day">
+                <h2>Weekend (Saturday & Sunday)</h2>
+                <ul>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:00 AM - 8:30 AM: Morning Routine</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:30 AM - 9:00 AM: Breakfast</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 9:00 AM - 12:00 PM: Study Session 1</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:00 PM - 12:30 PM: Lunch</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:30 PM - 3:30 PM: Study Session 2</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 3:30 PM - 4:00 PM: Break/Relaxation</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 4:00 PM - 7:00 PM: Study Session 3</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:00 PM - 7:30 PM: Dinner</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:30 PM - 9:30 PM: Study Session 4</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 9:30 PM - 10:00 PM: Relaxation</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 10:00 PM - 11:00 PM: Personal Time</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox"> 11:00 PM - 8:00 AM: Sleep</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Course Completion Expected: July 21, 2024</p>
+        </div>
+    </div>
+    <script>
+        function toggleComplete(item) {
+            item.classList.toggle('completed');
+            item.querySelector('input').checked = !item.querySelector('input').checked;
+        }
+    </script>
+</body>
+</html>

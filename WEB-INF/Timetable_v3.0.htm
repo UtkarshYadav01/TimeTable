@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .goal {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffeb3b;
+            border-radius: 5px;
+            color: #f57f17;
+            font-weight: bold;
+            text-align: center;
+        }
+        .day {
+            margin-bottom: 20px;
+        }
+        .day h2 {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            color: #00796b;
+        }
+        .day ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .day ul li {
+            background-color: #e0f2f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .day ul li:nth-child(even) {
+            background-color: #b2dfdb;
+        }
+        .day ul li.completed {
+            text-decoration: line-through;
+            color: #757575;
+        }
+        .day ul li.checked-on-time {
+            background-color: #66bb6a; /* Green */
+        }
+        .day ul li.checked-late {
+            background-color: #ffeb3b; /* Yellow */
+        }
+        .day ul li.not-checked {
+            background-color: #ef9a9a; /* Red */
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Weekly Schedule 🚀</h1>
+            <p>July 8 - July 14, 2024</p>
+        </div>
+        <div class="content">
+            <div class="goal">
+                <p>Goal: Complete Course Efficiently 🎯</p>
+                <p>You have started a course with 82 hours, 46 minutes, and 32 seconds of content. Your goal is to complete it as quickly as possible while balancing your full-time job and other commitments.</p>
+            </div>
+            <div class="day">
+                <h2>Weekdays (Monday - Friday) 📆</h2>
+                <ul>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>7:00 AM - 7:30 AM: Morning Routine ☕️</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>7:30 AM - 8:00 AM: Breakfast 🍳</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>8:00 AM - 10:40 AM: Study Session 1 📚</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>10:40 AM - 11:00 AM: Stand-up Call 🎤</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>11:00 AM - 12:30 PM: Study Session 2 📖</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>12:30 PM - 1:00 PM: Lunch 🥗</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>1:00 PM - 1:30 PM: Relaxation/Preparation for Work 🧘‍♂️</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>1:30 PM - 11:00 PM: Work 💼</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>3:30 PM - 3:45 PM: Short Break ☕️</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>6:00 PM - 7:00 PM: Dinner 🍝</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>8:30 PM - 8:45 PM: Short Break ☕️</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>11:00 PM - 12:00 AM: Relaxation/Personal Time 🛀</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>12:00 AM - 7:00 AM: Sleep 😴</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                </ul>
+            </div>
+            <div class="day">
+                <h2>Weekend (Saturday & Sunday) 🌞</h2>
+                <ul>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>8:00 AM - 8:30 AM: Morning Routine ☕️</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>8:30 AM - 9:00 AM: Breakfast 🥞</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>9:00 AM - 12:00 PM: Study Session 1 📚</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>12:00 PM - 12:30 PM: Lunch 🍕</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>12:30 PM - 3:30 PM: Study Session 2 📖</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>3:30 PM - 4:00 PM: Break/Relaxation 🌳</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>4:00 PM - 7:00 PM: Study Session 3 📝</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>7:00 PM - 7:30 PM: Dinner 🍜</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>7:30 PM - 9:30 PM: Study Session 4 📊</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>9:30 PM - 10:00 PM: Relaxation 🛋️</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>10:00 PM - 11:00 PM: Personal Time 🎮</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                    <li onclick="toggleStarted(this)">
+                        <input type="checkbox" class="start-checkbox">
+                        <label>11:00 PM - 8:00 AM: Sleep 😴</label>
+                        <input type="checkbox" class="complete-checkbox">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Course Completion Expected: July 21, 2024</p>
+        </div>
+    </div>
+    <script>
+        function toggleStarted(item) {
+            const startCheckbox = item.querySelector('.start-checkbox');
+            const completeCheckbox = item.querySelector('.complete-checkbox');
+            const now = new Date();
+            const currentHour = now.getHours();
+            const startTime = item.textContent.split(':')[0];
+
+            if (currentHour >= parseInt(startTime)) {
+                startCheckbox.checked = true;
+                item.classList.add('checked-on-time');
+            } else {
+                item.classList.add('not-checked');
+            }
+
+            completeCheckbox.addEventListener('click', function(event) {
+                event.stopPropagation();
+                if (completeCheckbox.checked) {
+                    item.classList.add('completed');
+                    item.classList.remove('not-checked');
+                    if (currentHour >= parseInt(startTime)) {
+                        item.classList.remove('checked-late');
+                        item.classList.add('checked-on-time');
+                    } else {
+                        item.classList.remove('checked-on-time');
+                        item.classList.add('checked-late');
+                    }
+                } else {
+                    item.classList.remove('completed');
+                    if (currentHour >= parseInt(startTime)) {
+                        item.classList.remove('checked-on-time');
+                    } else {
+                        item.classList.remove('checked-late');
+                    }
+                    item.classList.add('not-checked');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

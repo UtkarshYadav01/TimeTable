@@ -58,7 +58,6 @@
             border-radius: 5px;
             display: flex;
             align-items: center;
-            cursor: pointer;
         }
         .day ul li:nth-child(even) {
             background-color: #b2dfdb;
@@ -74,51 +73,55 @@
             padding: 10px;
             border-top: 1px solid #ddd;
         }
+        input[type="checkbox"].checked {
+            background-color: #66bb6a; /* Green */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Weekly Schedule</h1>
+            <h1>📅 Weekly Schedule 🚀</h1>
             <p>July 8 - July 14, 2024</p>
         </div>
         <div class="content">
             <div class="goal">
-                <p>Goal: Complete the course with 82h 46m 32s of content by July 21, 2024</p>
+                <p>Goal: Complete Course Efficiently 🎯</p>
+                <p>You have started a course with 82 hours, 46 minutes, and 32 seconds of content. Your goal is to complete it as quickly as possible while balancing your full-time job and other commitments.</p>
             </div>
             <div class="day">
-                <h2>Weekdays (Monday - Friday)</h2>
+                <h2>Weekdays (Monday - Friday) 📆</h2>
                 <ul>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:00 AM - 7:30 AM: Morning Routine</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:30 AM - 8:00 AM: Breakfast</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:00 AM - 10:40 AM: Study Session 1</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 10:40 AM - 11:00 AM: Stand-up Call</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 11:00 AM - 12:30 PM: Study Session 2</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:30 PM - 1:00 PM: Lunch</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 1:00 PM - 1:30 PM: Relaxation/Preparation for Work</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 1:30 PM - 11:00 PM: Work</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 3:30 PM - 3:45 PM: Short Break</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 6:00 PM - 6:30 PM: Dinner Break</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:30 PM - 8:45 PM: Short Break</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 11:00 PM - 12:00 AM: Relaxation/Personal Time</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:00 AM - 7:00 AM: Sleep</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>7:00 AM - 7:30 AM: Morning Routine ☕️</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>7:30 AM - 8:00 AM: Breakfast 🍳</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>8:00 AM - 10:40 AM: Study Session 1 📚</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>10:40 AM - 11:00 AM: Stand-up Call 🎤</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>11:00 AM - 12:30 PM: Study Session 2 📖</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>12:30 PM - 1:00 PM: Lunch 🥗</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>1:00 PM - 1:30 PM: Relaxation/Preparation for Work 🧘‍♂️</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>1:30 PM - 11:00 PM: Work 💼</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>3:30 PM - 3:45 PM: Short Break ☕️</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>6:00 PM - 6:30 PM: Dinner Break 🍽️</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>8:30 PM - 8:45 PM: Short Break ☕️</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>11:00 PM - 12:00 AM: Relaxation/Personal Time 🛀</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>12:00 AM - 7:00 AM: Sleep 😴</label></li>
                 </ul>
             </div>
             <div class="day">
-                <h2>Weekend (Saturday & Sunday)</h2>
+                <h2>Weekend (Saturday & Sunday) 🌞</h2>
                 <ul>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:00 AM - 8:30 AM: Morning Routine</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 8:30 AM - 9:00 AM: Breakfast</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 9:00 AM - 12:00 PM: Study Session 1</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:00 PM - 12:30 PM: Lunch</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 12:30 PM - 3:30 PM: Study Session 2</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 3:30 PM - 4:00 PM: Break/Relaxation</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 4:00 PM - 7:00 PM: Study Session 3</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:00 PM - 7:30 PM: Dinner</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 7:30 PM - 9:30 PM: Study Session 4</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 9:30 PM - 10:00 PM: Relaxation</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 10:00 PM - 11:00 PM: Personal Time</li>
-                    <li onclick="toggleComplete(this)"><input type="checkbox"> 11:00 PM - 8:00 AM: Sleep</li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>8:00 AM - 8:30 AM: Morning Routine ☕️</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>8:30 AM - 9:00 AM: Breakfast 🥞</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>9:00 AM - 12:00 PM: Study Session 1 📚</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>12:00 PM - 12:30 PM: Lunch 🍕</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>12:30 PM - 3:30 PM: Study Session 2 📖</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>3:30 PM - 4:00 PM: Break/Relaxation 🌳</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>4:00 PM - 7:00 PM: Study Session 3 📝</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>7:00 PM - 7:30 PM: Dinner 🍜</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>7:30 PM - 9:30 PM: Study Session 4 📊</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>9:30 PM - 10:00 PM: Relaxation 🛋️</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>10:00 PM - 11:00 PM: Personal Time 🎮</label></li>
+                    <li onclick="toggleComplete(this)"><input type="checkbox" onclick="toggleCheckbox(this)"><label>11:00 PM - 8:00 AM: Sleep 😴</label></li>
                 </ul>
             </div>
         </div>
@@ -129,7 +132,11 @@
     <script>
         function toggleComplete(item) {
             item.classList.toggle('completed');
-            item.querySelector('input').checked = !item.querySelector('input').checked;
+        }
+
+        function toggleCheckbox(checkbox) {
+            checkbox.classList.toggle('checked');
+            checkbox.parentElement.classList.toggle('completed');
         }
     </script>
 </body>

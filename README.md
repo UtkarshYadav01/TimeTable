@@ -3,6 +3,8 @@
 - [🏠 Home](https://utkarshyadav01.github.io/TimeTable/)
 - [📅 Timetable v1.0](https://utkarshyadav01.github.io/TimeTable/WEB-INF/Timetable_v1.0.htm)
 - [📅 Timetable v2.0](https://utkarshyadav01.github.io/TimeTable/WEB-INF/Timetable_v2.0.htm)
+- [📅 Timetable v3.0](https://utkarshyadav01.github.io/TimeTable/WEB-INF/Timetable_v3.0.htm)
+
 
 
 # 📆 TimeTable 
